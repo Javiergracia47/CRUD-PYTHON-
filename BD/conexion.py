@@ -1,14 +1,14 @@
 import mysql.connector # conecto python con mysql
 from mysql.connector import Error # capturo los erorres de muysql
 
-class DatabaseConexion():  # data access object 
+class DatabaseConexion():  
     def __init__(self):
         try: 
             self.conexion = mysql.connector.connect(
                 host='localhost',
                 port=3306,
                 user='root',
-                password='',  # Vacío en XAMPP por defecto
+                password='', 
                 database='universidad'
             )
         except Error as ex:
